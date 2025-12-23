@@ -1,21 +1,20 @@
-## Authentication Method: Password
+## 认证方式：密码 (Password)
 
-### Changing or Resetting Password
+### 修改或重置密码
 
-Use `Rescue CLI` to reset or change the password.
-
-```bash
-docker exec -it remnawave remnawave
-```
-
-After entering `Rescue CLI`, select the `Reset superadmin` option.
-
-### Emergency Password Authentication Enable
-
-If you have disabled the "Password" authentication method but later lost access to one of the other authentication methods – you can enable the "Password" authentication method using `Rescue CLI`
+使用 Rescue CLI 来重置或修改密码：
 
 ```bash
 docker exec -it remnawave remnawave
 ```
 
-After entering `Rescue CLI`, select the `Enable password authentication` option.
+进入 Rescue CLI 后，选择 Reset superadmin（重置超级管理员）选项。
+### 启用紧急密码认证
+
+如果你禁用了“密码”认证方式，但随后失去了对其他认证方式（如 OAuth2）的访问权限，你可以通过 Rescue CLI 强制重新启用“密码”认证：
+
+```bash
+docker exec -it remnawave remnawave
+```
+
+进入 Rescue CLI 后，选择 Enable password authentication（启用密码认证）选项。
