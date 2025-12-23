@@ -1,36 +1,35 @@
 ## OAuth2: PocketID
 
-### Creating an OIDC Client
+### 创建 OIDC 客户端
 
-Log in to the PocketID admin panel and navigate to: `Settings` → `OIDC Clients` → `Add OIDC Client`
+登录 PocketID 管理面板并导航至：Settings（设置） → OIDC Clients（OIDC 客户端） → Add OIDC Client（添加 OIDC 客户端）。
 
 ```
-# Replace YOUR_PANEL_DOMAIN with your Remnawave panel address
+# 请将 YOUR_PANEL_DOMAIN 替换为您 Remnawave 面板的实际地址
 https://YOUR_PANEL_DOMAIN/oauth2/callback/pocketid
 ```
 
-### OAuth2 Settings in Remnawave
+### Remnawave 中的 OAuth2 设置
 
-After creating the OAuth2 application – copy the `Client ID` and `Client Secret`. Insert this data in the corresponding section. And below, enter the list of email addresses for which login will be allowed.
+创建好 OIDC 客户端后，复制 Client ID 和 Client Secret 并填入对应区域。在下方输入允许登录的邮箱地址列表。 
 
-In the `Plain Domain` field, enter the domain address where your PocketID is located.
-Just enter the domain name – without the path and `https://`, for example: `pocketid.your-domain.com`
+在 Plain Domain（纯域名）字段中，输入 PocketID 所在的域名。只需输入域名即可——不要包含路径和 https://，例如：pocketid.your-domain.com。
 
-### Custom Claims (v2.4.0+)
+### 自定义声明 / Custom Claims (v2.4.0+)
 
-Remnawave also supports authorization using Custom Claims.
-When using this method, you do not need to specify an array of email addresses.
+Remnawave 还支持通过 Custom Claims 进行授权。
+使用此方法时，您无需手动指定邮箱地址列表。
 
-Key
+Key(键)
 
 ```
 remnawaveAccess
 ```
 
-Value
+Value(值)
 
 ```
 true
 ```
 
-Accordingly, if a user has this key (`remnawaveAccess: true`) in their token, they will be authorized.
+相应地，如果用户的 Token 中包含此键值对（remnawaveAccess: true），他们将被允许登录。
