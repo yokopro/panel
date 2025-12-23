@@ -1,39 +1,36 @@
 ## Telegram OAuth2
 
-To configure the "Login via Telegram" feature, you need a Telegram bot. Additionally, you need to configure the bot for the feature to work correctly.
+要配置“通过 Telegram 登录”功能，你需要一个 Telegram 机器人（Bot）。此外，你还需要对该机器人进行特定配置，以确保功能正常运行。
+### 机器人配置
 
-### Bot Configuration
+1. 打开 @BotFather (https://t.me/botfather)
 
-1. Open @BotFather (https://t.me/botfather)
+2. 发送 `/mybots` 命令并选择所需的机器人。
 
-2. Send the `/mybots` command and select the required bot
+3. 选择 `Bot settings` → `Domain`
 
-3. Select the option `Bot settings` → `Domain`
+4. 选择 `Set domain`
 
-4. Select the option `Set domain`
-
-    Now send the bot a message containing the domain name used to access Remnawave.
+    向机器人发送一条包含访问 Remnawave 所用域名的消息：
 
     ```
     https://panel.domain.com
     ```
 
-### Access Configuration
+### 访问权限配置
 
-After entering the bot token, you need to specify a list of administrator IDs who will have access to login.
-
-1. From the required account, launch the bot – https://t.me/Get_myidrobot
-2. In response, the bot will send you your ID, enter it in the corresponding field.
+在输入机器人 Token 后，你需要指定允许登录的管理员 ID 列表。
+1. 使用需要授权的账号启动此机器人： – https://t.me/Get_myidrobot
+2. 该机器人会回复你的 ID，请将其输入到对应的配置字段中。
 
 ---
 
-### Known Error Solutions
+### 常见错误解决方法
 
-###### Error: BOT_DOMAIN_INVALID
+###### 错误：BOT_DOMAIN_INVALID
 
-This error occurs due to incorrect bot domain configuration – review the "Bot Configuration" section (above). If necessary, repeat this step-by-step process.
+此错误是由于机器人域名配置不正确引起的。请重新查看上方的“机器人配置”章节，如有必要，请重新执行该步骤。
 
-###### Error: Telegram confirmation code not received during login
-
-Unfortunately, this issue cannot be resolved from the Remnawave side. Try using a bot that was created a while ago or use a different browser.
-Alternatively, you can try logging in on one of the "official" resources – for example, https://fragment.com. Since the Telegram session within the browser will be shared – you can try logging into the panel.
+###### 错误：登录时未收到 Telegram 确认码
+另一种方案： 你可以尝试先在 Telegram 的“官方”资源，例如（https://fragment.com ） 上进行登录。
+由于浏览器内的 Telegram 会话（Session）是共享的，之后你可以再次尝试登录面板。
